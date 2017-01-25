@@ -3,8 +3,8 @@
 import vtk
 from vtk import *
 import math
+import sys
 import datetime
-
 
 def createGraph(points):
     g = vtk.vtkMutableDirectedGraph()
@@ -111,12 +111,13 @@ def visualize(points):
     G.SetCells(vtk.VTK_LINE, line)
 
     gw = vtk.vtkXMLUnstructuredGridWriter()
-    gw.SetFileName("vertex.vtu")
+    gw.SetFileName(outputFileName)
     gw.SetInputData(G)
     gw.Write()
 
-filename = "sample_data/miednica_2_5.vtk"
 
+filename = sys.argv[1]
+outputFileName = sys.argv[2]
 reader = vtk.vtkStructuredPointsReader()
 reader.SetFileName(filename)
 reader.Update()
