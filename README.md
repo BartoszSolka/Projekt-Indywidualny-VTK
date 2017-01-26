@@ -11,4 +11,4 @@ Projekt zakłada implementację filtru wykorzystującego bibliotekę Python VTK,
 ### Przykład użycia
 "C:\Program Files\Anaconda2\envs\py27\python.exe" E:/PythonProjects/Projekt-Indywidualny-VTK/VoxelToGraphFilter.py sample_data/skel.vtk vertex.vtu
 
-python <plik.py> <plik wejściowy> <plik wyjściowy>
+python \<plik.py> \<plik wejściowy> \<plik wyjściowy>
